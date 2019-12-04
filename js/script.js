@@ -91,3 +91,18 @@ gameGrid.forEach( item => {
     grid.appendChild(card);
 
 });
+
+// Add event listener to grid
+grid.addEventListener('click', function(event) {
+    // The event target is our click target
+    let clicked = event.target;
+
+    // Do not allow the grid section itself to be selected
+    // Only select cards/divs inside the grid
+    if (clicked.nodeName === 'section') {
+        return;
+    }
+
+    // Add 'selected' class
+    clicked.classList.add('selected');
+});
