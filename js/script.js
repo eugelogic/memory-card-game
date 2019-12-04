@@ -67,3 +67,22 @@ grid.setAttribute('class', 'grid');
 
 // Append the grid section (child) to the game div (parent)
 game.appendChild(grid);
+
+// For each item in the cardsArray array ...
+cardsArray.forEach( item => {
+    // Create a div
+    const card = document.createElement('div');
+
+    // Apply a card class to that div
+    card.classList.add('card');
+
+    // Set the cardsArray name to the data-name attribute of the div
+    card.dataset.name = item.name;
+
+    // Apply the cardsArray image to the background image of the div
+    card.style.backgroundImage = `url(${item.img})`;
+
+    // Append the card div to the grid section
+    grid.appendChild(card);
+
+});
