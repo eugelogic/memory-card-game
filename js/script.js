@@ -60,6 +60,8 @@ const cardsArray = [
 
 // Duplicate array to create a match for each card
 let gameGrid = cardsArray.concat(cardsArray);
+// Randomise game grid on each load
+gameGrid.sort(() => 0.5 - Math.random());
 
 // Grab the root div with the id of game
 const game = document.getElementById('game');
