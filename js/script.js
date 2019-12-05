@@ -63,6 +63,8 @@ let gameGrid = cardsArray.concat(cardsArray);
 // Randomise game grid on each load
 gameGrid.sort(() => 0.5 - Math.random());
 
+let count = 0;
+
 // Grab the root div with the id of game
 const game = document.getElementById('game');
 
@@ -103,6 +105,10 @@ grid.addEventListener('click', function(event) {
         return;
     }
 
-    // Add 'selected' class
-    clicked.classList.add('selected');
+    if (count < 2) {
+        count++;
+        // Add 'selected' class
+        clicked.classList.add('selected');
+    }
+
 });
