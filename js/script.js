@@ -66,6 +66,7 @@ gameGrid.sort(() => 0.5 - Math.random());
 let firstGuess = '';
 let secondGuess = '';
 let count = 0;
+let previousTarget = null;
 
 // Grab the root div with the id of game
 const game = document.getElementById('game');
@@ -101,9 +102,9 @@ grid.addEventListener('click', function(event) {
     // The event target is our click target
     let clicked = event.target;
 
-    // Do not allow the grid section itself to be selected
-    // Only select cards/divs inside the grid
-    if (clicked.nodeName === 'section') {
+    // Do not allow the grid section itself to be selected, only select cards/divs inside the grid
+    // Prevent the same card to be clicked twice
+    if (clicked.nodeName === 'section' || clicked === previousTarget ) {
         return;
     }
 
@@ -127,6 +128,8 @@ grid.addEventListener('click', function(event) {
                 match();
             }
         }
+        // Set previous target to clicked
+        previousTarget = clicked;
 
     }
 
