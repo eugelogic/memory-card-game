@@ -70,11 +70,9 @@ let previousTarget = null;
 
 // Grab the root div with the id of game
 const game = document.getElementById('game');
-
 // Create a section with a class of grid
 const grid = document.createElement('section');
 grid.setAttribute('class', 'grid');
-
 // Append the grid section (child) to the game div (parent)
 game.appendChild(grid);
 
@@ -82,20 +80,36 @@ game.appendChild(grid);
 gameGrid.forEach( item => {
     // Create a div
     const card = document.createElement('div');
-
     // Apply a card class to that div
     card.classList.add('card');
-
     // Set the cardsArray name to the data-name attribute of the div
     card.dataset.name = item.name;
-
     // Apply the cardsArray image to the background image of the div
     card.style.backgroundImage = `url(${item.img})`;
-
     // Append the card div to the grid section
     grid.appendChild(card);
 
 });
+
+// Add 'match' CSS class to selected elements
+const match = () => {
+    var selected = document.querySelectorAll('.selected');
+    selected.forEach(card => {
+        card.classList.add('match');
+    });
+}
+
+// Reset guesses
+const resetGuesses = () => {
+    firstGuess = '';
+    secondGuess = '';
+    count = 0;
+
+    var selected = document.querySelectorAll('.selected');
+    selected.forEach(card => {
+        card.classList.remove('selected');
+    });
+}
 
 // Add event listener to grid
 grid.addEventListener('click', function(event) {
@@ -107,7 +121,6 @@ grid.addEventListener('click', function(event) {
     if (clicked.nodeName === 'SECTION' || clicked === previousTarget ) {
         return;
     }
-
     if (count < 2) {
         count++;
         if (count === 1) {
@@ -135,27 +148,5 @@ grid.addEventListener('click', function(event) {
         }
         // Set previous target to clicked
         previousTarget = clicked;
-
     }
-
 });
-
-// Add 'match' CSS class to selected elements
-const match = () => {
-    var selected = document.querySelectorAll('.selected');
-    selected.forEach(card => {
-        card.classList.add('match');
-    });
-}
-
-// Reset guesses
-const resetGuesses = () => {
-    firstGuess = '';
-    secondGuess = '';
-    count = 0;
-
-    var selected = document.querySelectorAll('.selected');
-    selected.forEach(card => {
-        card.classList.remove('selected');
-    });
-}
