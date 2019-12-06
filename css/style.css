@@ -19,7 +19,7 @@ h1 {
 }
 
 .grid {
-  max-width: 1122px;
+  max-width: 1470px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -36,8 +36,8 @@ h1 {
 .card,
 .front,
 .back {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
 }
 
 .back,
@@ -64,4 +64,19 @@ h1 {
 
 .match .front {
     background: #25215f !important;
+}
+
+@media screen and (max-width: 1440px) {
+
+    .grid {
+        max-width: 1122px;
+    }
+
+    .card,
+    .front,
+    .back {
+        height: 150px;
+        width: 150px;
+    }
+
 }
