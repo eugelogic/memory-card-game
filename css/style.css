@@ -9,6 +9,14 @@ body {
   background: #FDA937;
 }
 
+
+h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+}
+
 .grid {
   max-width: 1122px;
   margin: 0 auto;
