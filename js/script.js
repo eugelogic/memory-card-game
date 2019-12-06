@@ -85,11 +85,18 @@ gameGrid.forEach( item => {
     card.classList.add('card');
     // Set the cardsArray name to the data-name attribute of the div
     card.dataset.name = item.name;
+    // Create front of the card
+    const front = document.createElement('div');
+    front.classList.add('front');
+    // Create back of the card
+    const back = document.createElement('div');
+    back.classList.add('back');
     // Apply the cardsArray image to the background image of the div
-    card.style.backgroundImage = `url(${item.img})`;
+    back.style.backgroundImage = `url(${item.img})`;
     // Append the card div to the grid section
     grid.appendChild(card);
-
+    card.appendChild(front);
+    card.appendChild(back);
 });
 
 // Add 'match' CSS class to selected elements
@@ -119,20 +126,22 @@ grid.addEventListener('click', function(event) {
 
     // Do not allow the grid section itself to be selected, only select cards/divs inside the grid
     // Prevent the same card to be clicked twice
-    if (clicked.nodeName === 'SECTION' || clicked === previousTarget ) {
+    if (clicked.nodeName === 'SECTION' || clicked === previousTarget) {
         return;
     }
     if (count < 2) {
         count++;
         if (count === 1) {
             // Assign first guess
-            firstGuess = clicked.dataset.name;
+            firstGuess = clicked.parentNode.dataset.name;
+            console.log(firstGuess);
             // Add 'selected' class
-            clicked.classList.add('selected');
+            clicked.parentNode.classList.add('selected');
         } else {
             // Assign second guess
-            secondGuess = clicked.dataset.name;
-            clicked.classList.add('selected');
+            secondGuess = clicked.parentNode.dataset.name;
+            console.log(secondGuess);
+            clicked.parentNode.classList.add('selected');
         }
         // if both guesses are not empty
         if (firstGuess !== '' && secondGuess !== '') {
