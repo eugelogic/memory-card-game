@@ -126,7 +126,12 @@ grid.addEventListener('click', function(event) {
 
     // Do not allow the grid section itself to be selected, only select cards/divs inside the grid
     // Prevent the same card to be clicked twice
-    if (clicked.nodeName === 'SECTION' || clicked === previousTarget) {
+    if (
+        clicked.nodeName === 'SECTION' ||
+        clicked === previousTarget ||
+        clicked.parentNode.classList.contains('selected') ||
+        clicked.parentNode.classList.contains('match')
+        ) {
         return;
     }
     if (count < 2) {
