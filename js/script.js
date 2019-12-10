@@ -66,6 +66,7 @@ let secondGuess = '';
 let count = 0;
 let previousTarget = null;
 let delay = 1200;
+let guessCount = 0;
 
 const game = document.getElementById('game');
 const grid = document.createElement('section');
@@ -140,6 +141,8 @@ grid.addEventListener('click', event => {
                 setTimeout(match, delay);
             }
             setTimeout(resetGuesses, delay);
+            guessCount++;
+            console.log(guessCount);
         }
         previousTarget = clicked;
     }
