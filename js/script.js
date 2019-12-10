@@ -110,6 +110,13 @@ const resetGuesses = () => {
     });
 };
 
+const gameOver = () => {
+    const matched = document.querySelectorAll('.match');
+    if (matched.length === 28) {
+        console.log('GAME OVER');
+    }
+}
+
 grid.addEventListener('click', event => {
 
     const clicked = event.target;
@@ -137,7 +144,8 @@ grid.addEventListener('click', event => {
 
         if (firstGuess && secondGuess) {
             if (firstGuess === secondGuess) {
-                setTimeout(match, delay);
+                match();
+                setTimeout(gameOver, delay);
             }
             setTimeout(resetGuesses, delay);
         }
