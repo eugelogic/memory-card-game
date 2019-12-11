@@ -111,12 +111,26 @@ const resetGuesses = () => {
     });
 };
 
+const panel = document.createElement('section');
+panel.setAttribute('class', 'game-over');
+
 const gameOver = () => {
     const matched = document.querySelectorAll('.match');
     if (matched.length === 28) {
         console.log('GAME OVER');
+        replacedNode = grid.parentNode.replaceChild(panel, grid);
+        panel.innerHTML = `
+            <span class="close-btn" onClick="window.location.reload();">&times;</span>
+            <h2>GAME OVER</h2>
+            <span class="emoji">&#127881;</span>
+            <p>Congratulation !</p>
+            <p>It took you only ${guessCount} tries.</p>
+            <span class="emoji">&#128079;</span>
+            <button class="btn btn-xmas" type="button" name="button" onClick="window.location.reload();">Play Again</button>
+        `;
+
     }
-}
+};
 
 grid.addEventListener('click', event => {
 
