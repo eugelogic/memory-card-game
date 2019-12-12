@@ -5,7 +5,7 @@
 }
 
 html {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Baloo Bhai', cursive;
 }
 
 body {
@@ -87,16 +87,18 @@ h1 {
 }
 
 .game-over h2 {
-    font-size: 34px;
+    font-size: 40px;
+    margin-top: 0;
 }
 
 .game-over p {
     font-size: 28px;
+    margin-top: 5px;
 }
 
 .game-over button {
     display: block;
-    margin: 30px auto;
+    margin: 5px auto 15px;
 }
 
 .game-over .emoji {
@@ -104,6 +106,7 @@ h1 {
 }
 
 .btn {
+    font-family: 'Baloo Bhai', cursive;
     color: #fff;
     background-color: #fda937;
     font-weight: bold;
