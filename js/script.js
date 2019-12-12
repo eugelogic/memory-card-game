@@ -1,13 +1,5 @@
 const cardsArray = [
     {
-        name: 'louise',
-        img: 'img/louise.png',
-    },
-    {
-        name: 'lisa',
-        img: 'img/lisa.jpg',
-    },
-    {
         name: 'kelly',
         img: 'img/kelly.png',
     },
@@ -116,7 +108,7 @@ panel.setAttribute('class', 'game-over');
 
 const gameOver = () => {
     const matched = document.querySelectorAll('.match');
-    if (matched.length === 28) {
+    if (matched.length === 24) {
         console.log('GAME OVER');
         replacedNode = grid.parentNode.replaceChild(panel, grid);
         panel.innerHTML = `
