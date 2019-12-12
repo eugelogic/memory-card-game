@@ -49,8 +49,15 @@ h1 {
     backface-visibility: hidden;
 }
 
+.front::before {
+    content: '?';
+}
+
 .front {
-    background: #25215f url('../img/itd-logo.jpg') no-repeat center center;
+    background-color: #25215f;
+    font-size: 130px;
+    color: white;
+    text-align: center;
 }
 
 .back {
@@ -67,6 +74,10 @@ h1 {
 
 .match .front {
     background: #25215f !important;
+}
+
+.match .front::before {
+    content: none;
 }
 
 .game-over {
