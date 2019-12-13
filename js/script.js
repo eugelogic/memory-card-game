@@ -1,51 +1,51 @@
 const cardsArray = [
     {
-        name: 'kelly',
-        img: 'img/kelly.png',
+        name: 'donut-neon-sign',
+        img: 'img/alex-holyoake-unsplash.jpg',
     },
     {
-        name: 'kerry',
-        img: 'img/kerry.png',
+        name: 'donut-w-hearts',
+        img: 'img/anastasiia-ostapovych-unsplash.jpg',
     },
     {
-        name: 'chris',
-        img: 'img/chris.jpg',
+        name: 'donut-w-cherries',
+        img: 'img/anita-austvika-unsplash.jpg',
     },
     {
-        name: 'marcus',
-        img: 'img/marcus.jpg',
+        name: 'blue-donut',
+        img: 'img/sharon-mccutcheon-unsplash.jpg',
     },
     {
-        name: 'steve',
-        img: 'img/steve.png',
+        name: 'plastic-waste',
+        img: 'img/brian-yurasits-unsplash.jpg',
     },
     {
-        name: 'russell',
-        img: 'img/russell.jpg',
+        name: 'donut-w-almonds',
+        img: 'img/eiliv-sonas-aceron-unsplash.jpg',
     },
     {
-        name: 'eugene',
-        img: 'img/eugene.png',
+        name: 'donut-w-flowers',
+        img: 'img/kadarius-seegars-unsplash.jpg',
     },
     {
-        name: 'david',
-        img: 'img/david.png',
+        name: 'donut-w-chocolate',
+        img: 'img/lu-amaral-unsplash.jpg',
     },
     {
-        name: 'mark',
-        img: 'img/mark.png',
+        name: 'inflatable-donut',
+        img: 'img/rhema-kallianpur-unsplash.jpg',
     },
     {
-        name: 'calum',
-        img: 'img/calum.jpg',
+        name: 'donut-w-bite-mark',
+        img: 'img/nathan-dumlao-unsplash.jpg',
     },
     {
-        name: 'emily',
-        img: 'img/emily.png',
+        name: 'donut-w-poppy-seeds',
+        img: 'img/stanislav-kondratiev-unsplash.jpg',
     },
     {
-        name: 'pets',
-        img: 'img/pets.jpg',
+        name: 'pile-of-donuts',
+        img: 'img/tijana-drndarski-unsplash.jpg',
     },
 ];
 
@@ -114,7 +114,7 @@ const gameOver = () => {
         panel.innerHTML = `
             <span class="close-btn" onClick="window.location.reload();">&times;</span>
             <h2>GAME OVER</h2>
-            <span class="emoji">&#127881;</span>
+            <span class="emoji">🍩</span>
             <p>Congratulation !</p>
             <p>It took you only ${guessCount} tries.</p>
             <span class="emoji">&#128079;</span>
