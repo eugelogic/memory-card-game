@@ -11,7 +11,7 @@ html {
 
 body {
   margin: 20px 0;
-  background: red;
+  background: #00778B; /* blue pastel */
 }
 
 
@@ -63,7 +63,7 @@ h1 {
 }
 
 .front {
-    background-color: green;
+    background-color: #AC3434; /* dark red */
     font-size: 130px;
     color: white;
     text-align: center;
@@ -84,7 +84,7 @@ h1 {
 }
 
 .match .front {
-    background-color: blue !important;
+    background-color: #E5B024 !important; /* dark yellow */
 }
 
 .match .front::before {
@@ -93,7 +93,7 @@ h1 {
 
 .game-over {
     color: white;
-    background-color: green;
+    background-color: #AC3434; /* dark red */
     text-align: center;
     padding: 40px;
     max-width: 1440px;
@@ -130,7 +130,7 @@ h1 {
 .btn {
     font-family: 'Baloo Bhai', cursive;
     color: #fff;
-    background-color: blue;
+    background: #00778B; /* blue pastel */
     font-weight: bold;
     padding: 10px 15px;
     border: none;
@@ -138,10 +138,6 @@ h1 {
     font-size: 16px;
     text-transform: uppercase;
     cursor: pointer;
-}
-
-.btn-xmas {
-    background-color: red;
 }
 
 .footer {

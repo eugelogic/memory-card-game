@@ -118,7 +118,7 @@ const gameOver = () => {
             <p>Congratulation !</p>
             <p>It took you only ${guessCount} tries.</p>
             <span class="emoji">&#128079;</span>
-            <button class="btn btn-xmas" type="button" name="button" onClick="window.location.reload();">Play Again</button>
+            <button class="btn" type="button" name="button" onClick="window.location.reload();">Play Again</button>
         `;
 
     }
